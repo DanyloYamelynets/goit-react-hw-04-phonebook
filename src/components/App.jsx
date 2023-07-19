@@ -15,9 +15,9 @@ export default function App() {
 
   useEffect(() => {
     const stringifiedContacts = localStorage.getItem('contacts');
-    const parsedContacts = JSON.parse(stringifiedContacts) || contacts;
+    const parsedContacts = JSON.parse(stringifiedContacts) || [];
     setContacts(parsedContacts);
-  }, [contacts]);
+  }, []);
 
   useEffect(() => {
     if (!contacts.length) return;
